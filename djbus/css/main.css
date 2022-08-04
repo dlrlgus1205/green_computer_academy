@@ -9,6 +9,25 @@ ul, li {
   list-style: none; /* li 태그 앞에 동그라미 삭제 */
 }
 
+em, address  {
+  font-style: normal; /* em 태그가 기본적으로 기울어져 있음 이를 해결 */
+}
+
+button {
+  background-color: transparent;
+  color: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+
+}
+
+.clearfix:after{display:block;clear:both;content:".";visibility:hidden;height:0;}
+.clearfix{display:block;}
+
 body {
   color: #3d3d3d;
   line-height: 1.5;
@@ -19,7 +38,8 @@ body {
 }
 
 a {
-  color: #3d3d3d;
+  /* 브라우저가 정으하는 파란색은 적용하지 않고, 부모요소가 정의한 색상을 따르겠다는 뜻*/
+  color: inherit;
   text-decoration: none;
 }
 
@@ -61,6 +81,8 @@ header nav ul li a {
 }
 
 .visual strong {
+  display: block; /* strong이 인라인 태그라서 margin 적용 x, block 요소로 변경*/
+  padding: 112px 0 14px 0;
   color: #ffffff;
   font-size: 25px;
   font-weight: 400;
@@ -70,5 +92,171 @@ header nav ul li a {
   color: #ffffff;
   line-height: 1.2;
   font-size: 50px;
+}
+
+.visual p em {
   font-weight: 700;
+}
+
+.promotion .art {
+  margin: 182px 0 96px 0;
+}
+
+.promotion .art img {
+  float: left;
+}
+
+.promotion .art .inner {
+  float: left;
+  margin: 28px 0 0 40px;
+}
+
+.promotion .lee {
+  margin: 0 0 182px 0;
+}
+/* 두 요소에 float: right를 주면 코딩순서의 역순으로 요소들이 오른쪽에 정렬 */
+.promotion .lee img {
+  float: right;
+}
+
+.promotion .lee .inner {
+  float: right;
+  margin: 29px 37px 0 0;
+}
+
+.promotion h2 {
+  color: #1d1d1d;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.promotion p {
+  margin: 18px 0 36px 0;
+}
+
+.promotion p strong {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.promotion a {
+  display: inline-block;
+  float: left;
+  padding: 5px 26px;
+  margin: 0 5px 0 0;
+  border: 1px solid #666666;
+}
+
+.bbs {
+  background-image: url(../images/bbs_bg.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.bbs .notice {
+  /* notice 글자는 대부분 흰색 - 내부요소에 스타일을 상속 */
+  color: #ffffff;
+}
+
+.bbs .notice .tit {
+  float: left;
+  margin: 91px 0 0 0;
+}
+
+.bbs .notice .tit h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.bbs .notice .tit p {
+  margin: 10px 0 10px 0;
+}
+
+.bbs .notice .tit a {
+  display: inline-block;
+  padding: 5px 26px;
+  border: 1px solid #ffffff;
+}
+
+.bbs .notice ul {
+  float: right;
+  width: 770px;
+  margin: 83px 0 0 0;
+}
+
+.bbs .notice ul li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.bbs .notice ul li.first {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.bbs .notice ul li a {
+  padding: 15px 0 15px 0;
+}
+
+.bbs .notice ul li a strong {
+  float: left;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.bbs .notice ul li a span {
+  float: right;
+  color: rgba(255, 255, 255, 0.3);
+  margin: 5px 0 0 0;
+}
+
+.bbs .movie {
+  margin: 220px 0 0 0;
+}
+
+.bbs .movie h2 {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.bbs .movie ul li {
+  float: left;
+  width: 400px;
+  margin: 0 40px 0 0;
+}
+
+.bbs .movie ul li.last {
+  margin: 0;
+}
+
+.bbs .movie ul li a {
+  display: block;
+}
+
+.bbs .movie ul li a span {
+  display: block;
+}
+
+.bbs .movie ul li a strong {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+footer {
+  margin: 24px 0 0 0;
+  background-color: #0A0A0A;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+footer .inner {
+  float: left;
+  margin: 62px 0 62px 0;
+}
+
+footer button {
+  float: right;
+  width: 166px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  margin: 62px 0 62px 0;
 }
