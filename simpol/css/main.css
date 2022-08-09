@@ -1,0 +1,90 @@
+/* main.css에 default.css 삽입 - 호출 */
+@import url(default.css);
+
+header {
+  height: 100px;
+}
+
+header h1 {
+  float: left;
+  margin: 29px 0 0 8px;
+}
+
+header nav {
+  float: right;
+  margin: 0 40px 0 0;
+}
+
+header nav ul {
+  float: left;
+}
+
+header nav ul li {
+  float: left;
+}
+
+header nav ul li a {
+  display: block;
+  padding: 35px 17px;
+  color: #1d1d1d;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+header nav .market {
+  float: left;
+  display: block;
+  padding: 6px 23px 6px 55px;
+  margin: 28px 0 0 50px;
+  border: 1px solid #6AAE27;
+  border-radius: 20px;
+  background-image: url(../images/market_ico.png);
+  background-position: left 20px top 10px;
+  background-repeat: no-repeat;
+  color: #6AAE27;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.visual {
+  padding: 0 40px;
+  color: #ffffff;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.visual .inner {
+  height: 980px;
+  background-image: url(../images/visual_bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.visual strong {
+  display: block;
+  padding: 248px 0 0 0;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.visual h2 {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.category .tit {
+  color: #1d1d1d;
+}
+
+.category .tit strong{
+  display: block;
+  margin: 82px 0 0 0;
+  font-weight: 700;
+}
+
+.category .tit h2 {
+  margin: 0 0 43px 0;
+  line-height: 1.1;
+  font-size: 40px;
+  font-weight: 300;
+}
