@@ -1,0 +1,70 @@
+@import url(default.css);
+
+.business {
+  height: 688px;
+}
+
+.business h1 {
+  text-align: center;
+  margin: 80px 0 20px 0;
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.business ul li {
+  float: left;
+  width: 290px;
+  margin: 0 40px 0 0;
+}
+
+.business ul li:last-child {
+  margin-right: 0;
+}
+
+.business ul li strong {
+  display: block;
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.ti {
+  margin: 80px 0 0 0;
+  background-color: #F4F4F4;
+  height: 762px;
+}
+
+.ti h1 {
+  text-align: center;
+  padding: 80px 0 20px 0;
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.ti ul li {
+  float: left;
+  text-align: center;
+  width: 620px;
+  height: 514px;
+  margin: 0 40px 0 0;
+  color: #F4F4F4;
+}
+
+.ti ul li:last-child {
+  margin-right: 0;
+}
+
+.ti ul li.img01 {
+  background-image: url(../images/ti01.png);
+}
+
+.ti ul li.img02 {
+  background-image: url(../images/ti02.png);
+}
+
+.ti ul li strong {
+  display: block;
+  margin: 196px 0 8px 0;
+  font-size: 35px;
+  font-weight: 700;
+}
