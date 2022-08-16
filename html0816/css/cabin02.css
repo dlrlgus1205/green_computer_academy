@@ -100,24 +100,21 @@
 }
 
 @media screen and (max-width:640px){
-  .service .tit {
-    text-align: left;
-  }
-  
+
   .service .tit h2 {
     margin: 50px 0 10px 0;
     font-size: 25px;
   }
-  
+
   .service .tit strong {
     margin: 0 0 10px 0;
     font-size: 18px;
   }
-  
+
   .service .tit p {
     margin: 0 0 50px 0;
   }
-  
+
   .service .tit p span {
     display: inline; /* 모바일에선 줄바꿈 빼기 */
   }
@@ -125,10 +122,10 @@
   .service ul li {
     float: none;
     width: auto;
-    padding-top: 49px;
-    margin: 0 0 63px 0;
+    padding: 0 0 0 56px;
+    margin: 0 0 45px 0;
   }
-  
+
   .service ul li::before {
     width: 40px;
     height: 40px;
@@ -137,7 +134,7 @@
     /* 행간을 높이와 동일하게 - 글자가 위아래 동일하게 */
     font-size: 30px;
   }
-  
+
   .service ul li h3 {
     margin-bottom: 9px;
     font-size: 17px;

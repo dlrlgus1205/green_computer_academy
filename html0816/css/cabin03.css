@@ -99,6 +99,30 @@
   font-weight: 700;
 }
 
+@media screen and (max-width:1280px){
+  .service ul li {
+    width: 22%;
+    margin: 0 4% 61px 0;
+  }
+}
+
+@media screen and (max-width:1024px){
+  .service ul li {
+    width: 48%;
+  }
+
+  .service ul li:nth-child(2),
+  .service ul li:nth-child(6) {
+  margin-right: 0;
+  }
+
+  .service ul li:nth-child(3),
+  .service ul li:nth-child(7) {
+  clear: left;
+  /* 2줄 이상을 float로 정렬할 때 두 번째 줄 첫 번째 요소에 필수값으로 줌 */
+  }
+}
+
 @media screen and (max-width:640px){
   .service .tit {
     text-align: left;
@@ -123,10 +147,10 @@
   }
 
   .service ul li {
-    float: none;
-    width: auto;
+    /* float: none;
+    width: auto; */
     padding-top: 49px;
-    margin: 0 0 63px 0;
+    /* margin: 0 0 63px 0; */
   }
   
   .service ul li::before {
@@ -141,5 +165,25 @@
   .service ul li h3 {
     margin-bottom: 9px;
     font-size: 17px;
+  }
+}
+
+@media screen and (max-width:480px){
+  .service ul li {
+    float: none;
+    width: auto;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width:1280px){
+  html, body {
+    min-width: auto;
+    /* font-size: 13px; */
+  }
+  
+  .wrapper {
+    width: auto;
+    margin: 0 20px;
   }
 }
