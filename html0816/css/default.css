@@ -46,9 +46,11 @@ html, body {
   margin: 0 auto;
 }
 
-@media screen and (max-width:450px){
+@media screen and (max-width:640px){
+  /* 브라우저 사이즈 640px 이하부터는 이 안에 정의된 css가 적용됨 640 초과할 땐 이 css가 적용되지 않음 */
   html, body {
     min-width: auto;
+    /* 디바이스 크기에 맞춰서 알아서 100% - pc에서 넓이를 제한했기 때문에 넓이 제한을 둘려고 주는 값 */
     font-size: 13px;
   }
   

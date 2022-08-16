@@ -1,1 +1,148 @@
 @import url(default.css);
+
+.service .tit {
+  text-align: center;
+}
+
+.service .tit h2 {
+  margin: 100px 0 20px 0;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.service .tit strong {
+  display: block;
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.service .tit p {
+  margin: 0 0 100px 0;
+}
+
+.service .tit p span {
+  /* p태그 안에서 임의로 줄바꿈을 주기 위해서 span태그로 묶고 block으로 지정 */
+  display: block;
+}
+
+.service ul li {
+  position: relative;
+  float: left;
+  width: 290px;
+  padding-top: 99px;
+  margin: 0 40px 61px 0;
+}
+
+.service ul li:nth-child(4),
+.service ul li:nth-child(8) {
+  margin-right: 0;
+}
+
+.service ul li:nth-child(5) {
+  clear: left;
+  /* 2줄 이상을 float로 정렬할 때 두 번째 줄 첫 번째 요소에 필수값으로 줌 */
+}
+
+.service ul li::before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  background-color: #3d3d3d;
+  color: #ffffff;
+  line-height: 64px;
+  /* 행간을 높이와 동일하게 - 글자가 위아래 동일하게 */
+  text-align: center;
+  font-size: 50px;
+  content: "";
+}
+
+.service ul li:nth-child(1):before {
+  content: "1";
+}
+
+.service ul li:nth-child(2):before {
+  content: "2";
+}
+
+.service ul li:nth-child(3):before {
+  content: "3";
+}
+
+.service ul li:nth-child(4):before {
+  content: "4";
+}
+
+.service ul li:nth-child(5):before {
+  content: "5";
+}
+
+.service ul li:nth-child(6):before {
+  content: "6";
+}
+
+.service ul li:nth-child(7):before {
+  content: "7";
+}
+
+.service ul li:nth-child(8):before {
+  content: "8";
+}
+
+.service ul li h3 {
+  margin-bottom: 24px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media screen and (max-width:640px){
+
+  .service .tit {
+    text-align: left;
+  }
+  
+  .service .tit h2 {
+    margin: 50px 0 10px 0;
+    font-size: 25px;
+  }
+  
+  .service .tit strong {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+  }
+  
+  .service .tit p {
+    margin: 0 0 50px 0;
+  }
+  
+  .service .tit p span {
+    display: inline; /* 모바일에선 줄바꿈 빼기 */
+  }
+
+  .service ul li {
+    float: none;
+    width: auto;
+    padding-top: 49px;
+    margin: 0 0 63px 0;
+  }
+  
+  .service ul li::before {
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    line-height: 37px;
+    /* 행간을 높이와 동일하게 - 글자가 위아래 동일하게 */
+    font-size: 30px;
+  }
+  
+  .service ul li h3 {
+    margin-bottom: 9px;
+    font-size: 17px;
+  }
+}
