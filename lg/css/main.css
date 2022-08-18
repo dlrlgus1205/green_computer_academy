@@ -1,0 +1,10 @@
+@import url(default.css);
+
+.visual {
+  height: 900px;
+  background-image: url(../images/visual_bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
