@@ -32,6 +32,7 @@ ul, li {
 button {
   background-color: transparent; /* 투명 */
   border: 0;
+  color: inherit;
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;

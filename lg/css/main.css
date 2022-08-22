@@ -23,6 +23,9 @@ header h1 {
 
 header h1 a {
   display: block;
+  width: 114px;
+  height: 50px;
+  background: url(../images/lg_logo_w.svg) no-repeat center center / 100%;
 }
 
 header .gnb {
@@ -67,6 +70,10 @@ header.fixed {
   background-color: #fff;
 } /* header가 고정됐을 때 jquery가 class를 추가*/
 
+header.fixed h1 a {
+  background-image: url(../images/lg_logo.svg);
+}
+
 header.fixed .gnb ul li a {
   color: #1d1d1d;
 }
@@ -79,15 +86,16 @@ header.fixed .tnb i {
   header {
     height: 45px;
   }
-
-  header h1 a img {
-    width: 50px;
-  }
   
   header h1 {
     margin: 12px 0 0 0;
   }
   
+  header h1 a {
+    width: 50px;
+    height: 22px;
+  }
+
   header .gnb {
     float: right;
     margin: 11px 0 0 0;
@@ -406,5 +414,184 @@ header.fixed .tnb i {
 
   .pur p {
     display: none;
+  }
+}
+
+.new {
+  margin: 100px 0;
+}
+
+.new h2 {
+  display: none;
+}
+
+.new ul li {
+  float: left;
+  width: 290px;
+  margin: 0 40px 0 0;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.new ul li:last-child {
+  margin-right: 0;
+}
+
+.new ul li a {
+  display: block;
+}
+
+.new ul li a img{
+  width: 100%;
+}
+
+.new ul li a .cate {
+  display: block;
+  margin: 20px 20px 10px 20px;
+  font-weight: 700;
+}
+
+.new ul li a .tit {
+  display: block;
+  margin: 0 20px 25px 20px;
+  font-size: 20px;
+  font-weight: 400;
+  height: 3em;
+  overflow: hidden;
+}
+
+.new ul li a .date {
+  display: block;
+  margin: 0 20px 33px 20px;
+  color: #666;
+}
+
+@media screen and (max-width:640px) {
+  .new {
+    margin: 50px 0;
+  }
+
+  .new ul li {
+    display: none;
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .new ul li:first-child {
+    display: block;
+  }
+
+  .new ul li a .cate {
+    margin: 22px 20px 3px 20px;
+  }
+  
+  .new ul li a .tit {
+    margin: 0 20px 7px 20px;
+    font-size: 15px;
+    font-weight: 400;
+    height: auto;
+    overflow: visible;
+  }
+  
+  .new ul li a .date {
+    margin: 0;
+    padding: 0 20px 27px 20px;
+  }
+}
+
+footer {
+  padding: 41px 0 103px 0;
+  background-color: #1A1A1A;
+  color: rgba(255,255,255,0.8);
+}
+
+footer .family {
+  float: right;
+}
+
+footer .family button {
+  width: 148px;
+  height: 42px;
+  padding: 0 9px 0 14px;
+  border: 1px solid rgba(255,255,255,0.8);
+  /* button 태그는 높이를 주면 글자가 위아래 가운데에 세로 정렬을 함 a였다면 padding이나 line-height로 서로 정렬 값을 별도로 줘야함 */
+}
+
+footer .family button span {
+  float: left;
+}
+
+footer .family button i {
+  float: right;
+}
+
+footer .inner {
+  float: left;
+}
+
+footer .inner .privacy {
+  font-weight: 700;
+}
+
+footer .fnav li {
+  position: relative;
+  float: left;
+}
+
+footer .fnav li::after {
+  position: absolute;
+  right: 0;
+  top: 7px;
+  width: 1px;
+  height: 9px;
+  background-color: rgba(255,255,255,0.6);
+  content: "";
+}
+
+footer .fnav li:last-child:after {
+  display: none;
+}
+
+footer .fnav li a {
+  display: block;
+  padding: 0 18px;
+}
+
+footer .fnav li:first-child a {
+  padding-left: 0;
+}
+
+footer .finfo {
+  margin: 20px 0;
+}
+
+@media screen and (max-width:640px) {
+  footer {
+    padding: 26px 0 62px 0;
+  }
+  
+  footer .family {
+    float: left;
+  }
+  
+  footer .family button {
+    width: 148px;
+    height: 38px;
+    padding: 0 8px 0 19px;
+    margin: 0 0 28px 0;
+  }
+
+  footer .fnav li::after {
+    position: absolute;
+    right: 0;
+    top: 6px;
+    width: 1px;
+    height: 9px;
+    background-color: rgba(255,255,255,0.6);
+    content: "";
+  }
+  
+  footer .finfo {
+    margin: 10px 0;
   }
 }
