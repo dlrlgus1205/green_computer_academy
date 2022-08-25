@@ -8,6 +8,7 @@ header {
   /* position absolute를 주면 요소가 inline-block이 된 것처럼 내부에 콘텐츠가 존재하는 만큼 넓이를 갖는다 */
   height: 100px;
   color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 header h1 {
@@ -30,8 +31,99 @@ header .gnb {
   float: left;
 }
 
+header .gnb button {
+  display: none;
+}
+
+header .gnb ul li {
+  float: left;
+}
+
+header .gnb ul li {
+  display: block;
+  padding: 37px 30px;
+  font-size: 22px;
+}
+
 header .tnb {
   float: right;
+}
+
+header .tnb ul li {
+  float: left;
+}
+
+header .tnb ul li button {
+  margin: 24px 0;
+  padding: 10px;
+}
+
+header .tnb ul li button span {
+  display: none;
+}
+
+header .tnb ul li button i {
+  font-size: 32px;
+}
+
+@media screen and (max-width:640px) {
+  header {
+    height: 45px;
+    border-bottom: none;
+  }
+  
+  header h1 {
+    margin: 11px 0 0 0;
+  }
+  
+  header h1 a {
+    width: 127px;
+    height: 24px;
+  }
+  
+  header .gnb {
+    float: right;
+    margin: 11px 0 0 10px;
+  }
+  /* 
+    h1 / gnb / tnb 
+    코딩 순서가 위와 같을 때
+    모든 요소에 float: right;를 주면
+    화면에 나타나는 순서는
+    tnb / gnb / h1이 된다.
+    > float: right;를 먼저 선언한 요소가 오른쪽 자리를 선정
+  */
+  header .gnb button {
+    display: block;
+  }
+
+  header .gnb button span {
+    display: none;
+  }
+  header .gnb button i {
+    font-size: 24px;
+  }
+  
+  header .gnb ul {
+    display: none;
+  }
+ 
+  header .tnb {
+    margin: 11px 0 0 0;
+  }
+
+  header .tnb ul li.mypage {
+    display: none;
+  }
+  
+  header .tnb ul li button {
+    margin: 0;
+    padding: 0;
+  }
+  
+  header .tnb ul li button i {
+    font-size: 24px;
+  }
 }
 
 .visual {
@@ -77,5 +169,490 @@ header .tnb {
 
   .visual .txt_mobile {
     display: block;
+  }
+}
+
+.book {
+  margin: 100px 0 0 0;
+}
+
+.book .tit {
+  float: left;
+}
+/* 컨텐츠 영역 밖으로 나가는 리스트 - 스크롤(모바일)
+1. ul을 감싸는 div가 있어야 함
+2. ul을 감싸는 div는  overflow:autuo 이어야 함(모바일) 넓이와 높이를 입력
+3. ul은 li 전체의 넓이를 가져야 함 position: absolute(모바일) - 좌우로 슬라이드는 absolute만 됨 */
+.book .tit h2 {
+  margin-bottom: 20px;
+  color: #1d1d1d;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.book .tit .btn {
+  margin-top: 20px;
+}
+
+.book .tit .btn button {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  border: 1px solid #666;
+}
+
+.book .tit .btn button span {
+  display: none;
+}
+
+.book .tit .btn button i {
+  font-size: 24px;
+  margin-top: 7px;
+}
+
+.book .list {
+  margin-left: 330px;
+  /* 왼쪽 요소는 float:left를 줌
+  오른쪽 요소는 margin-left로 왼쪽 요소의 넓이 만큼을 여백으로 줌
+  오른쪽 요소는 block임
+  오른쪽 요소가 왼쪽 요소를 인지하지 못하고 위로 올라옴 */
+}
+
+.book .list ul {
+  width: 1940px;
+  /* 모든 li가 한 줄로 들어갈 수 있는 넓이 */
+}
+
+.book .list ul li {
+  float: left;
+  width: 290px;
+  margin-right: 40px;
+}
+
+.book .list ul li:last-child {
+  margin-right: 0;
+}
+
+.book .list ul li a {
+  display: block;
+}
+
+.book .list ul li a strong {
+  display: block;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  /* 무조건 1줄로 표시 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width:640px) {
+  
+.book {
+  margin: 50px 0 0 0;
+}
+
+.book .tit {
+  float: none;
+}
+/* 컨텐츠 영역 밖으로 나가는 리스트 - 스크롤(모바일)
+1. ul을 감싸는 div가 있어야 함
+2. ul을 감싸는 div는  overflow:autuo 이어야 함(모바일) 넓이와 높이를 입력
+3. ul은 li 전체의 넓이를 가져야 함 position: absolute(모바일) - 좌우로 슬라이드는 absolute만 됨 */
+.book .tit h2 {
+  float: left;
+  margin: 0;
+  font-size: 30px;
+}
+
+.book .tit p {
+  display: none;
+}
+
+.book .tit .btn {
+  float: right;
+  margin: 5px;
+}
+
+.book .tit .btn button {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  border: 1px solid #666;
+}
+
+.book .tit .btn button i {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.book .list {
+  padding: 30px 0 0 0;
+  overflow-y: hidden;
+  /* 가로스크롤 바가 생성 되면, 가로스크롤 바만큼 높이가 줄어서 세로스크롤 바가 생성되기도 함 그걸 방지*/
+  overflow-x: auto;
+  width: calc(100% + 20px);
+  /* 
+    calc는 넓이나 높이의 수치를 계산할 때 사용
+    대부분 %와 px를 혼용할 때 사용
+    list에 100%를 주면 wrapper가 좌우에 여백 20px을 준 안쪽으로 넓이가 생성된다.
+    그런데 오른쪽으로만 콘텐츠 영역 밖으로 더 나가고자 하면 calc(100% +20px)
+  */
+  margin-left: 0;
+  /* 왼쪽 요소는 float:left를 줌
+  오른쪽 요소는 margin-left로 왼쪽 요소의 넓이 만큼을 여백으로 줌
+  오른쪽 요소는 block임
+  오른쪽 요소가 왼쪽 요소를 인지하지 못하고 위로 올라옴 */
+}
+
+.book .list ul {
+  width: 1012px;
+  /* 모든 li가 한 줄로 들어갈 수 있는 넓이 */
+}
+
+.book .list ul li {
+  width: 152px;
+  margin-right: 16px;
+}
+
+.book .list ul li a {
+  display: block;
+}
+
+.book .list ul li a img {
+  width: 100%;
+}
+
+.book .list ul li a strong {
+  display: block;
+  margin-top: 20px;
+  font-size: 13px;
+  font-weight: 400;
+  /* 무조건 1줄로 표시 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* 1줄 > 2줄 
+  line-height: 1.5;
+  height: 3em; 
+  */
+  }
+}
+
+.intv h2 {
+  margin: 250px 0 50px 0;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.intv .colgroup {
+  position: relative;
+  /* pic_box 정렬의 기준점 */
+}
+
+.intv .pic {
+  position: absolute;
+  left: 0;
+  top: 48px;
+}
+
+.intv .cnt_box {
+  height: 382px;
+  margin: 0 0 0 70px;
+  background-color: #756752;
+  color: #fff;
+}
+
+.intv .cnt_box .inner {
+  padding: 68px 70px 0 620px;
+}
+
+.intv .cnt_box h3 {
+  margin: 0 0 20px 0;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.intv .cnt_box a {
+  display: block;
+  width: 160px;
+  height: 40px;
+  margin: 30px 0 0 0;
+  padding: 0 2px 0 12px;
+  line-height: 40px;
+  white-space: nowrap;
+  /* 버튼 디자인에서 글자를 높이의 위아래 가운데 배치하기 위한 제일 쉬운 방법은 행간을 높이값과 동일하게 주는 것임 */
+  border: 1px solid #fff;
+}
+
+.intv .cnt_box a span {
+  float: left;
+}
+
+.intv .cnt_box a i {
+  float: right;
+  margin-top: 7px;
+}
+
+@media screen and (max-width:640px) {
+ .intv {
+  margin: 50px 0 0 0;
+  padding: 26px 0 0 0;
+  background-color: #756752;
+ }
+
+ .intv h2 {
+  margin: 0 0 20px 0;
+  font-size: 30px;
+  color: #fff;
+} 
+
+.intv .pic {
+  position: relative;
+  left: auto;
+  top: auto;
+}
+
+.intv .pic img {
+  width: 100%;
+}
+
+.intv .cnt_box {
+  height: auto;
+  margin: 0;
+  padding-bottom: 40px;
+  background-color: none;
+  color: #fff;
+}
+
+.intv .cnt_box .inner {
+  padding: 0;
+}
+
+.intv .cnt_box h3 {
+  margin: 20px 0 42px 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.intv .cnt_box p {
+  display: none;
+}
+
+.intv .cnt_box a {
+  width: 128px;
+  height: 32px;
+  margin: 0 0 0 10px;
+  padding: 0 7px 0 15px;
+  line-height: 32px;
+}
+
+.intv .cnt_box a i {
+  float: right;
+  margin-top: 4px;
+} 
+}
+
+.news {
+  margin: 100px 0 0 0;
+}
+
+.news .tit h2 {
+  float: left;
+  color: #1d1d1d;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.news .tit .btn {
+  float: right;
+  margin-top: 20px;
+}
+
+.news .tit .btn button {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  border: 1px solid #666;
+}
+
+.news .tit .btn button span {
+  display: none;
+}
+
+.news .tit .btn button i {
+  font-size: 24px;
+  margin-top: 7px;
+}
+
+.news .list ul {
+  width: 2640px;
+  margin: 50px 0 0 -330px;
+}
+
+.news .list ul li {
+  float: left;
+  width: 290px;
+  margin: 0 40px 0 0;
+}
+
+.news .list ul li a {
+  display: block;
+}
+
+.news .list ul li a img {
+  width: 100%;
+}
+
+.news .list ul li a strong {
+  display: block;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width:640px) {
+  .news {
+    margin: 50px 0 0 0;
+  }
+  
+  .news .tit h2 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  
+  .news .tit .btn {
+    margin-top: 5px;
+  }
+  
+  .news .tit .btn button {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    border: 1px solid #666;
+  }
+  
+  .news .tit .btn button span {
+    display: none;
+  }
+  
+  .news .tit .btn button i {
+    font-size: 18px;
+    margin-top: 5px;
+  }
+  
+  .news .list {
+    overflow-y: hidden;
+    overflow-x: auto;
+    width: calc(100% +40px);
+    padding: 30px 0 0 0;
+    margin: 0 0 0 -20px;
+  }
+
+  .news .list ul {
+    width: 1760px;
+    margin: 0;
+  }
+  
+  .news .list ul li {
+    width: 200px;
+    margin: 0 20px 0 0;
+  }
+  
+  .news .list ul li a img {
+    width: 100%;
+  }
+  
+  .news .list ul li a strong {
+    display: block;
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+footer {
+  margin: 250px 0 0 0;
+  padding: 50px 0 80px 0;
+  background-color: #f4f4f4;
+  color: #666;
+}
+
+footer .flogo {
+  float: left;
+}
+
+footer .fnav {
+  float: left;
+  margin: 0 67px 0 174px;
+}
+
+footer .fnav ul li a {
+  display: block;
+  line-height: 35px;
+}
+
+footer .sns {
+  float: right;
+  font-size: 0;
+  line-height: 0;
+}
+
+footer .sns a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+footer .sns a.insta {
+  background: url(../images/sns_insta.svg) no-repeat center center;
+}
+
+footer .sns a.fb {
+  background: url(../images/sns_fb.svg) no-repeat center center;
+}
+
+footer .sns a.naver {
+  background: url(../images/sns_naver.svg) no-repeat center center;
+}
+
+
+footer .copyright {
+  float: left;
+  line-height: 35px;
+}
+
+@media screen and (max-width:640px) {
+  footer {
+    margin: 50px 0 0 0;
+    padding: 30px 0 35px 0;
+    text-align: center;
+  }
+  
+  footer .flogo {
+    float: none;
+  }
+  
+  footer .fnav {
+    float: none;
+    margin: 17px 0 24px 0;
+  }
+  
+  footer .sns {
+    float: none;
+  }
+  
+  footer .copyright {
+    float: none;
+    margin: 24px 0 0 0;
+    line-height: 35px;
   }
 }
