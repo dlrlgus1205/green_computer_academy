@@ -65,6 +65,20 @@ header .tnb ul li button span {
 header .tnb ul li button i {
   font-size: 32px;
 }
+/* header에 fixed 클래스가 추가됐을 때의 디자인 */
+
+header.fixed {
+  position: fixed; /* 스크롤을 내려도 그 위치 그대로 */
+  z-index: 100;
+  border-bottom: none;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  color: #1d1d1d;
+}
+
+header.fixed h1 a {
+  background: url(../images/logo.svg) no-repeat center center / 100%;
+}
 
 @media screen and (max-width:640px) {
   header {
