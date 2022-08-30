@@ -32,4 +32,11 @@ $(document).ready(function(){
   else {
     $('header').removeClass('fixed')
   }}
+
+  $('header nav > ul').on('mouseenter focusin', function(){
+    $('header').addClass('open')
+  })
+  $('header').on('mouseleave focusout', function(){
+    $('header').removeClass('open')
+  })
 })
