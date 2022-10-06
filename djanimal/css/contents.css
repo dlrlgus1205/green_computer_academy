@@ -1,5 +1,5 @@
 .content .cnt_introduce h2 {
-  margin: 161px 0 0 0;
+  margin: 73px 0;
   font-size: 40px;
   font-weight: 700;
   text-align: center;
@@ -58,8 +58,8 @@
 
 @media screen and (max-width:640px){
   .content .cnt_introduce h2 {
-    margin: 59px 0 20px 0;
-    font-size: 20px;
+    margin: 29px 0;
+    font-size: 17px;
   }
   .content .cnt_introduce .txt_wrap {
     margin: 0 0 50px 0;
