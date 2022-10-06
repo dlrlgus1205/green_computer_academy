@@ -23,7 +23,7 @@
 }
 .content .cnt_introduce .pc {
   display: block;
-  width: 100%;
+  width: 680px;
 }
 .content .cnt_introduce .mobile {
   display: none;
@@ -76,7 +76,7 @@
     margin: 0;
   }
   .content .cnt_introduce .rg3 {
-    margin: 0;
+    margin: 0 0 150px 0;
   }
   .content .cnt_introduce .pc {
     display: none;
