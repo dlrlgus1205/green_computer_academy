@@ -1,4 +1,3 @@
-# green_computer_academy
 # 이기현의 코딩 자료
 ## pc형 홈페이지 디자인 & 퍼블리싱
 - 대전복합터미널 : https://dlrlgus1205.github.io/green_computer_academy/djbus/index.html

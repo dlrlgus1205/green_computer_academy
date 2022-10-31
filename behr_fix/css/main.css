@@ -1,0 +1,620 @@
+@import url(default.css);
+
+header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100px;
+  color: #fff;
+}
+
+
+
+header h1 {
+  float: left;
+  margin: 28px 0 0 0;
+}
+
+header h1 a {
+  display: block;
+  width: 129px;
+  height: 44px;
+  background: url(../images/logo_w.svg) no-repeat left top / 100% auto;
+  /* 영역에 맞춰서 들어가는 로고는 짤리면 안됨 (cover x)
+  그래서 size가 100% 넓이에 꽉차게 auto 높이 비율에 맞게 알아서 */
+  font-size: 0;
+  line-height: 0;
+}
+
+header nav {
+  position: relative;
+  z-index: 110;
+  float: right;
+  margin: 18px 0 0 0;
+}
+
+header nav .gnb_open {
+  display: none;
+}
+
+header nav .gnb_close {
+  display: none;
+}
+
+/* 
+  <nav>
+    <ul>
+      <li>
+        <a href=""></a>
+        <ul>
+          <li><a href=""></a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  이렇게 동일한 태그가 반복되는 경우 (메뉴) 사용하는게 자식 선택자
+  1. 자식 선택의 시작이 반복되는 태그 x , nav처럼 한 번 나오는 태그만 가능
+  2. 자식 선택으로 선택 시 중간에 감사는 태그를 누락할 수 없음
+  nav > ul > ul --> 선택 불가
+  그래서 1차 메뉴의 a를 선택하는 선택자는 nav > ul > li > a
+  2차메뉴의 a를 선택하는 선택자는 nav > ul > li > ul > li > a
+ */
+header nav > ul > li {
+  float: left;
+  width: 240px;
+  text-align: center;
+}
+
+header nav > ul > li > a {
+  display: block;
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+header nav > ul > li > a:hover {
+  font-weight: 700;
+}
+
+header nav > ul > li > ul {
+  display: none;
+  padding: 20px 0 0 0;
+}
+
+header nav > ul > li > ul > li > a {
+  display: block;
+  color: #666;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+header nav > ul > li > ul > li > a:hover {
+  color: #1d1d1d;
+  font-weight: 700;
+}
+
+header.fixed {
+  position: fixed;
+}
+
+header.fixed,
+header.open {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #1d1d1d;
+}
+
+header.fixed h1 a,
+header.open h1 a{
+  background-image: url(../images/logo.svg);
+}
+
+header.open::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  height: 260px;
+  background-color: rgba(255, 255, 255, 0.5);
+  content: "";
+}
+
+header.open nav > ul > li > ul {
+  display: block;
+}
+
+@media screen and (max-width:640px) {
+  header {
+    height: 45px;
+  }
+  
+  header h1 {
+    margin: 13px 0 0 0;
+  }
+  
+  header h1 a {
+    width: 58px;
+    height: 20px;
+  }
+  
+  header nav {
+    margin: 13px 0 0 0;
+  }
+  
+  header nav .gnb_open {
+    display: block;
+  }
+  
+  header nav .gnb_open span {
+    display: none;
+  }
+
+  header nav .gnb_open i {
+    font-size: 20px;
+  }
+
+  header nav .gnb_close {
+    display: none;
+  }
+  
+  header nav > ul {
+    display: none;
+  }
+}
+
+.visual {
+  height: 900px;
+  background: url(../images/visual_bg.png) no-repeat center center / cover;
+  color: #fff;
+}
+
+.visual h2 {
+  padding: 418px 0 20px 0;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.visual p {
+  font-size: 20px;
+}
+
+@media screen and (max-width:640px) {
+  .visual {
+    height: auto;
+    background: url(../images/visual_m_bg.png) no-repeat center center / cover;
+    text-align: center;
+  }
+  
+  .visual h2 {
+    padding: 156px 0;
+    font-size: 20px;
+  }
+
+  .visual p {
+    display: none;
+  }
+}
+
+.product {
+  position: relative;
+  margin: 100px 0 0 0;
+}
+
+.product h2 {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 640px);
+  float: left;
+  font-size: 50px;
+  font-weight: 700;
+}
+.product h2.fixed {
+  position: fixed;
+  top: 120px;
+}
+.product h2.end {
+  position: absolute;
+  top: auto;
+  bottom: 105px;
+}
+
+.product .list {
+  margin-left: 440px;
+}
+
+.product .list ul li {
+  width: 400px;
+  margin: 0 0 76px 0;
+}
+
+.product .list ul li:nth-child(1),
+.product .list ul li:nth-child(3),
+.product .list ul li:nth-child(5) {
+  float: left;
+}
+
+.product .list ul li:nth-child(2),
+.product .list ul li:nth-child(4) {
+  float: right;
+}
+
+.product .list ul li:nth-child(2) {
+  margin-top: 200px;
+}
+
+.product .list ul li a {
+  display: block;
+}
+
+.product .list ul li a strong {
+  display: block;
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  height: 3em;
+  overflow: hidden;
+}
+
+.product .list ul li a span {
+  display: block;
+  margin: 0 0 20px 0;
+  line-height: 1.5;
+  height: 6;
+  overflow: hidden;
+}
+
+.product .list ul li a i {
+  font-size: 40px;
+}
+
+@media screen and (max-width:640px) {
+  .product {
+    margin: 50px 0 0 0;
+  }
+  
+  .product h2 {
+    position: relative;
+    left: auto;
+    top: auto;
+    float: none;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .product .list {
+    overflow-y: hidden;
+    overflow-x: auto;
+    margin-left: 0;
+  }
+  
+  .product .list ul {
+    width: 1680px;
+    padding: 20px 0;
+  }
+
+  .product .list ul li {
+    width: 320px;
+    margin: 0 20px 0 0;
+  }
+
+  .product .list ul li:nth-child(2),
+  .product .list ul li:nth-child(4) {
+    float: left;
+  }
+  
+  .product .list ul li:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .product .list ul li:last-child {
+    margin-right: 0;
+  }
+  
+  .product .list ul li a img {
+    width: 100%;
+  }
+
+  .product .list ul li a strong {
+    margin: 10px 0;
+    font-size: 13px;
+  }
+  
+  .product .list ul li a i {
+    font-size: 20px;
+  }
+}
+
+.brand {
+  padding: 0 0 80px 0;
+  margin: 24px 0 0 0;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.brand h2 {
+  padding: 80px 0 134px 0;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.brand h2 strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.brand ul li {
+  float: left;
+  width: 290px;
+  margin-right: 40px;
+}
+
+.brand ul li:last-child {
+  margin-right: 0;
+}
+
+.brand ul li i {
+  font-size: 40px;
+  color: #444;
+}
+
+.brand ul li h3 {
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media screen and (max-width:640px) {
+  .brand {
+    padding: 0 0 50px 0;
+    margin: 50px 0 0 0;
+  }
+
+  .brand h2 {
+    padding: 20px 0 50px 0;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .brand h2 strong {
+    display: none;
+  }
+
+  .brand ul li {
+    width: 50%;
+    margin-right: 0;
+  }
+
+  .brand ul li:nth-child(1) {
+    padding: 0 0 20px 0;
+    border-right: 1px solid #666;
+    border-bottom: 1px solid #666;
+  }
+
+  .brand ul li:nth-child(2) {
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #666;
+  }
+
+  .brand ul li:nth-child(3) {
+    padding: 30px 0 0 0;
+    border-right: 1px solid #666;
+  }
+
+  .brand ul li:nth-child(4) {
+    padding: 30px 0 0 0;
+  }
+
+  .brand ul li i {
+    font-size: 20px;
+    color: #444;
+  }
+
+  .brand ul li h3 {
+    margin: 20px 0 10px 0;
+    font-size: 15px;
+    font-weight: 700;
+  }
+}
+
+.service ul li {
+  float: left;
+  width: 33.33%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+}
+
+.service ul li.how {
+  background-image: url(../images/service01.png);
+}
+
+.service ul li.store {
+  background-image: url(../images/service02.png);
+}
+
+.service ul li.color {
+  background-image: url(../images/service03.png);
+}
+
+.service ul li a {
+  display: block;
+  height: 399px;
+  padding: 50px 0 0 50px;
+}
+
+.service ul li a span {
+  display: block;
+  font-weight: 700;
+}
+
+.service ul li a strong {
+  display: block;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.service ul li a i {
+  margin: 100px 0 0 0;
+  font-size: 40px;
+}
+
+@media screen and (max-width:640px) {
+  .service ul li {
+    float: none;
+    width: auto;
+  }
+
+  .service ul li a {
+    height: 173px;
+    padding: 30px 0 0 30px;
+  }
+  
+  .service ul li a strong {
+    font-size: 20px;
+  }
+  
+  .service ul li a i {
+    margin: 50px 0 0 0;
+    font-size: 20px;
+  }
+}
+
+aside {
+  position: fixed;
+  bottom: 150px;
+  right: 20px;
+  z-index: 10;
+}
+
+aside button {
+  width: 45px;
+  height: 45px;
+  border-radius: 25px;
+  background-color: #1d1d1d;
+  color: #fff;
+  text-align: center;
+  line-height: 0.5;
+  padding: 0 0 10px 0;
+}
+
+aside button i {
+  font-size: 24px;
+}
+
+aside button span {
+  font-weight: 700;
+}
+
+@media screen and (max-width:1400px) {
+  aside {
+    display: none;
+  }
+}
+
+footer {
+  background-color: #222;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0 0 87px 0;
+}
+
+footer .inner {
+  position: relative;
+}
+
+footer .flogo {
+  position: absolute;
+  left: 0;
+  top: 40px;
+}
+
+footer .flogo img {
+  width: 129px;
+  opacity: 0.8;
+}
+
+footer .sns {
+  height: 70px;
+}
+
+footer .sns ul {
+  float: right;
+  margin: 40px 0 0 0;
+}
+
+footer .sns ul li {
+  float: left;
+  margin: 0 0 0 5px;
+}
+
+footer .sns ul li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 25px auto;
+  font-size: 0;
+  line-height: 0;
+}
+
+footer .sns ul li.fb a {
+  background-image: url(../images/sns_fb.svg);
+}
+
+footer .sns ul li.nb a {
+  background-image: url(../images/sns_naver.svg);
+}
+
+footer .sns ul li.in a {
+  background-image: url(../images/sns_insta.svg);
+}
+
+footer .sns ul li.ut a {
+  background-image: url(../images/sns_utube.svg);
+}
+
+footer .finfo {
+  margin: 40px 0 40px 0;
+}
+
+footer .finfo span {
+  display: inline-block;
+}
+
+@media screen and (max-width:640px) {
+  footer {
+    padding: 30px 0 60px 0;
+    text-align: center;
+  }
+
+  footer .flogo {
+    position: relative;
+    left: auto;
+    top: auto;
+    margin: 0 0 20px 0;
+  }
+
+  footer .sns {
+    height: 50px;
+  }
+  
+  footer .sns ul {
+    display: inline-block;
+    float: none;
+    margin: 0;
+  }
+  
+  footer .sns ul li {
+    margin: 0 3px 0 3px;
+  }
+  
+  footer .finfo {
+    margin: 20px 0 10px 0;
+  }
+}
