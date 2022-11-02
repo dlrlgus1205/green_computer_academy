@@ -32,11 +32,23 @@
     }
     .popup { /* .visual .popup */
         height: 100vh;
-        ul li img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        ul {
+            li {
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transform: scale3d(1.1,1.1,1);
+                    transition: 2s;
+                }
+                /* 현재 나타나는 팝업에 swiper가 주는 class명 */
+                &.swiper-slide-active {
+                    img {
+                        transform: scale3d(1,1,1);
+                    }
+                }
+            }
         }
         .btn_wrap {
             display: flex;
@@ -139,7 +151,6 @@
         width: 670px;
     }
     h2 {
-        
         padding: 256px 0 35px 0;
         color: $w_tit_color;
         font-size: 30px;
@@ -563,7 +574,7 @@
 }
 @keyframes bg_txt_ani {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } 
+    100% { transform: translateX(-50.3%); }
     /* 무조건 html에서 글자를 동일한 글자를 두번 입력
        css 애니메이션으로 절반을 이동 
        그럼 두번째 단락의 글자 다시 나타남.
@@ -602,6 +613,9 @@
                     width: 250px;
                 }
             }
+        }
+        .bg_txt {
+            font-size: 60px;
         }
     }
 }
