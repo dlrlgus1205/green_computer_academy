@@ -336,6 +336,7 @@ html, body {
         그 밖에 있는 gnb_open, gnb_wrap과의 순서를 절대 조정 불가능함
 
     */
+    display: none;
     opacity: 0;
     transition: opacity 0.5s;
     position: fixed;
@@ -366,6 +367,7 @@ html, body {
     right: 0;
   }
   .header .gnb.mobile_open::after {
+    display: block;
     opacity: 1;
   }
 }
@@ -558,6 +560,7 @@ html, body {
 @media screen and (max-width: 1000px) {
   .sub_visual {
     height: 245px;
+    margin: 0 0 10px 0;
   }
   .sub_visual .sub_visual_bg {
     height: 100%;
@@ -581,12 +584,25 @@ html, body {
 .lnb {
   height: 80px;
 }
+.lnb .lnb_wrap {
+  overflow-x: auto; /* lnb_wrap의 넓이보다 ul의 넓이가 더 길어길때만 스크롤바가 생성 */
+  overflow-y: hidden;
+  padding: 20px 0 5px 0;
+}
+.lnb .lnb_wrap ul {
+  white-space: nowrap;
+  /* 하위 요소들 줄바꿈 금지 - 블럭요소는 안됨, float들어간 요소도 안됨.  
+     inline요소나 inline-block만 적용 됨. 
+     단, inline-block 요소의 사이사이에 space 한칸의 여백이 들어감.
+     그럼 요소들 사이의 여백을 이를 감안해서 줄이면 됨
+  */
+}
 .lnb .lnb_wrap ul li {
-  float: left;
+  display: inline-block;
 }
 .lnb .lnb_wrap ul li a {
   display: block;
-  padding: 0 34px;
+  padding: 0 30px;
   color: #999999;
   font-size: 30px;
   font-weight: 700;
@@ -606,4 +622,17 @@ html, body {
   height: 2px;
   background-color: #9D856D;
   content: "";
+}
+
+@media screen and (max-width: 640px) {
+  .lnb {
+    height: 45px;
+  }
+  .lnb .lnb_wrap {
+    padding: 17px 0 5px 0;
+  }
+  .lnb .lnb_wrap ul li a {
+    padding: 0 15px;
+    font-size: 15px;
+  }
 }
