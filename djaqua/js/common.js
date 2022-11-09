@@ -1,5 +1,5 @@
-$(document).ready(function(){
-    
+$(window).on('load', function () {
+
     let pcMo;
     let winW;
     pcChk();
@@ -60,9 +60,12 @@ $(document).ready(function(){
         }
     });
     
-    let headerH = $('.header').height();
+    let headerH = $('header').height();
+    // console.log(headerH,'헤더높이');
     let expTop = $('.exp').offset().top;
+    // console.log(expTop,'체험상단');
     let expH = $('.exp').height();
+    // console.log(expH,'체험높이');
 
     headerFixed();
 

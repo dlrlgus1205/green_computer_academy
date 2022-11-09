@@ -4,14 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/94a48106d1.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/main.css">
   <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="js/common.js"></script>
   <script src="js/main.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <link rel="stylesheet" href="css/main.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
   <title>대전 아쿠아리움</title>
 </head>
 <body>
@@ -112,52 +110,59 @@
       </div>
     </section>
     <section class="display">
-      <h2>전시관 안내</h2>
-      <span>대전 아쿠아리움만의 다양한 전시관을 만나보세요!</span>
-      <div class="video">
-        <video loop muted autoplay playsinline>
-          <source src="images/main/display.mp4" type="video/mp4">
-        </video>
+        <h2>전시관 안내</h2>
+        <span>대전 아쿠아리움만의 다양한 전시관을 만나보세요!</span>
+        <div class="video">
+          <video loop muted autoplay playsinline>
+            <source src="images/main/display.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="dp swiper">
+          <ul class="swiper-wrapper">
+            <li class="dp_submarine swiper-slide">
+              <a href="#n">
+                <img src="images/main/dp_submarine.png" alt="잠수함관">
+                <strong>잠수함관</strong>
+              </a>
+            </li>
+            <li class="dp_eu swiper-slide">
+              <a href="#n">
+                <img src="images/main/dp_eu.png" alt="유럽관">
+                <strong>유럽관</strong>
+              </a>
+            </li>
+            <li class="dp_amazon swiper-slide">
+              <a href="#n">
+                <img src="images/main/dp_amazon.png" alt="아마존관">
+                <strong>아마존관</strong>
+              </a>
+            </li>
+            <li class="dp_asia swiper-slide">
+              <a href="#n">
+                <img src="images/main/dp_asia.png" alt="아시아관">
+                <strong>아시아관</strong>
+              </a>
+            </li>
+            <li class="dp_kor swiper-slide">
+              <a href="#n">
+                <img src="images/main/dp_kor.png" alt="한국관">
+                <strong>한국관</strong>
+              </a>
+            </li>
+            <li class="dp_time swiper-slide">
+              <a href="#n">
+                <img src="images/main/dp_time.png" alt="타임캡슐관">
+                <strong>타임캡슐관</strong>
+              </a>
+            </li>
+            <li class="dp_main swiper-slide">
+              <a href="#n">
+                <img src="images/main/dp_main.png" alt="메인관">
+                <strong>메인관</strong>
+              </a>
+            </li>
+          </ul>
       </div>
-      <div class="dp swiper">
-        <ul class="swiper-wrapper clearfix">
-          <li class="dp_submarine swiper-slide">
-            <a href="#n">
-              <strong>잠수함관</strong>
-            </a>
-          </li>
-          <li class="dp_eu swiper-slide">
-            <a href="#n">
-              <strong>유럽관</strong>
-            </a>
-          </li>
-          <li class="dp_amazon swiper-slide">
-            <a href="#n">
-              <strong>아마존관</strong>
-            </a>
-          </li>
-          <li class="dp_asia active swiper-slide">
-            <a href="#n">
-              <strong>아시아관</strong>
-            </a>
-          </li>
-          <li class="dp_kor swiper-slide">
-            <a href="#n">
-              <strong>한국관</strong>
-            </a>
-          </li>
-          <li class="dp_time swiper-slide">
-            <a href="#n">
-              <strong>타임캡슐관</strong>
-            </a>
-          </li>
-          <li class="dp_main swiper-slide">
-            <a href="#n">
-              <strong>메인관</strong>
-            </a>
-          </li>
-        </ul>
-    </div>
     </section>
     <footer class="footer">
       <div class="wrapper">

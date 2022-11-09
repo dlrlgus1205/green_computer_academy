@@ -15,13 +15,15 @@ html, body {
 #wrap { /* id="wrap" */
     overflow: hidden;
     position: relative;
-    min-width: 1400px;
+    min-width: 320px;
     /* 브라우저에 가로스크롤이 생성되었을때 배경이 짤리지 않기 위해 
        최소 넓이를 줌 */
 }
 /* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
 .wrapper {
-    width: 1400px;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 20px;
     margin: 0 auto;
 }
 @media screen and (max-width:640px){
@@ -32,13 +34,6 @@ html, body {
     html, body {
         font-size: 13px;
     }
-    #wrap {
-        min-width: 320px;
-    }
-    .wrapper {
-        width: auto;
-        margin: 0 20px;
-    }
 }/* media 종료 */
 .clearfix::after{display:block;clear:both;content:".";visibility:hidden;height:0;}
 .clearfix{display:block;}
@@ -47,14 +42,6 @@ html, body {
    cnt_wrap 클래스 줌 */
 .cnt_wrap {
     position: relative;
-}
-
-.skip_nav {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1000000000;
-    width: 100%;
 }
 
 .header {
@@ -186,6 +173,12 @@ html, body {
 @media screen and (max-width:1440px){
     .header .logo {
         margin: 10px 0 0 10px;
+    }
+    .header .gnb {
+        margin: 0 2% 0 2%;
+    }
+    .header .time {
+        margin: 0 2% 0 0;
     }
 }
 .header.fixed {

@@ -131,9 +131,15 @@
     float: left;
     display: block;
     position: relative;
-    width: 560px;
+    width: 48%;
     height: 400px;
-    margin: 0 40px 200px 0;
+    margin: 0 3.5% 200px 0;
+}
+.exp .list ul li img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .exp .list ul li:nth-child(1),
 .exp .list ul li:nth-child(3),
@@ -273,63 +279,66 @@
     object-fit: cover;
 }
 .display ul {
-    position:absolute;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     margin: 130px 0 0 0;
-    align-items: flex-end;
 }
 .display ul li {
-    margin-right: 40px;
-    border-radius: 10px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
-}
-.display ul li.dp_submarine {
-    background-image: url(../images/main/dp_submarine.png);
-}
-.display ul li.dp_eu {
-    background-image: url(../images/main/dp_eu.png);
-}
-.display ul li.dp_amazon {
-    background-image: url(../images/main/dp_amazon.png);
-}
-.display ul li.dp_asia {
-    background-image: url(../images/main/dp_asia.png);
-}
-.display ul li.dp_kor {
-    background-image: url(../images/main/dp_kor.png);
-}
-.display ul li.dp_time {
-    background-image: url(../images/main/dp_time.png);
-}
-.display ul li.dp_main {
-    background-image: url(../images/main/dp_main.png);
-}
-.display ul li.active a {
-    width: 440px;
-    height: 440px;
-}
-.display ul li a {
-    display: flex;
-    padding: 0 30px 30px 0;
+    position: relative;
+    float: left;
     width: 220px;
-    height: 220px;
-    justify-content: flex-end;
-    align-items: flex-end;
+    padding: 110px 0 0 0;
+}
+.display ul li.swiper-slide-active {
+    display: block;
+    width: 440px;
+    padding: 0;
+    transition: 0.5s;
+}
+.display ul li a img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 .display ul li a strong {
-    display: block;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
     font-size: 30px;
     font-weight: 700;
 }
+@media screen and (max-width:1550px) {
+    .display ul li {
+        width: 180px;
+        padding: 90px 0 0 0;
+    }
+    .display ul li.swiper-slide-active {
+        width: 360px;
+    }
+    .display ul li a strong {
+        right: 25px;
+        bottom: 25px;
+        font-size: 25px;
+    }
+}
+@media screen and (max-width:1200px) {
+    .display ul li {
+        width: 150px;
+        padding: 75px 0 0 0;
+    }
+    .display ul li.swiper-slide-active {
+        width: 300px;
+    }
+    .display ul li a strong {
+        right: 20px;
+        bottom: 20px;
+        font-size: 20px;
+    }
+}
 @media screen and (max-width:640px) {
     .display {
-        height: 694px;
+        height: 450px;
         margin: 40px 0 0 0;
+        padding: 0 0 70px 0;
     }
     .display h2 {
         font-size: 30px;
@@ -339,43 +348,19 @@
         display: none;
     }
     .display ul {
-        position:static;
-        left: 0;
-        transform: translateX(0);
-        height: 488px;
-        margin: 0;
-        flex-wrap: wrap;
+        display: flex;
+        margin: 30px 0 0 0;
     }
     .display ul li {
-        margin: 0;
-        width: 44%;
-        height: 33%;
+        width: 120px;
+        padding: 60px 0 0 0;
     }
-    .display ul li:nth-child(1),
-    .display ul li:nth-child(3),
-    .display ul li:nth-child(5) {
-        margin: 0 4% 4% 4%;
-    }
-    .display ul li:nth-child(2),
-    .display ul li:nth-child(4),
-    .display ul li:nth-child(6) {
-        margin: 0 4% 4% 0;
-    }
-    .display ul li:last-child {
-        display: none;
-    }
-    .display ul li.active a {
-        width: 100%;
-        height: 100%;
-    }
-    .display ul li a {
-        padding: 50px 0 0 0;
-        width: 100%;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
+    .display ul li.swiper-slide-active {
+        width: 240px;
     }
     .display ul li a strong {
+        right: 15px;
+        bottom: 15px;
         font-size: 15px;
     }
 }

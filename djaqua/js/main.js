@@ -1,14 +1,12 @@
 $(document).ready(function(){
     let scrolling;
 
-    let fixObj = $('.exp h2'); //고정요소
-    let fixArea = $('.exp'); //고정요소를 감싸는 영역
-    let fixTop = 120; //css에서 fixed에 준 top값
-    let fixBtm = 0; //css에서 end에 준 bottom값
-    let fixStart; //fixed 시작점
-    let fixEnd; //fixed 종료점
-    // console.log(fixStart, 'fixStart');
-    // console.log(fixEnd, 'fixEnd');
+    let fixObj = $('.exp h2');
+    let fixArea = $('.exp');
+    let fixTop = 120;
+    let fixBtm = 0;
+    let fixStart;
+    let fixEnd;
 
     objFixed();
 
@@ -26,30 +24,42 @@ $(document).ready(function(){
         fixStart = fixArea.offset().top - fixTop;
         fixEnd = fixArea.offset().top + fixArea.height() - fixObj.height() - fixBtm - fixTop;
 
-        if(scrolling < fixStart){ // 위에서 부터 tit이 고정되기 전
+        if(scrolling < fixStart){
             fixObj.removeClass('fixed');
             fixObj.removeClass('end');
-        }else if((scrolling >= fixStart) && (scrolling < fixEnd)){ //tit이 고정될때
+        }else if((scrolling >= fixStart) && (scrolling < fixEnd)){
             fixObj.addClass('fixed');
             fixObj.removeClass('end');
-        }else{ //고정된 이후
+        }else{
             fixObj.removeClass('fixed');
             fixObj.addClass('end');
         }
     }
 
-    const swiper = new Swiper('.display .dp', {
+    const swiper_dp = new Swiper('.display .dp', {
 
-      effect: "fade", /* fade 효과 */
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
 
-      autoplay: {  /* 팝업 자동 실행 */
-          delay: 3000,
-          disableOnInteraction: true,
+        loop: true,
+        centeredSlides: true,
+        
+        slidesPerView: "auto", 
+        spaceBetween: 16,
+        breakpoints: {
+          640: {
+              spaceBetween: 30, 
+          },
+          1200: {
+              spaceBetween: 35,
+        },
+          1550: {
+              spaceBetween: 40,
+          },
       },
-
-      loop: true  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
-
-  });
+    });
 
 })
 
