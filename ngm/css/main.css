@@ -1,0 +1,195 @@
+@import url(default.css);
+@import url(common.css);
+
+.visual {
+  margin: 0 3%;
+}
+.visual .popup ul li img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.visual .popup .ctrl_wrap {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: 35px;
+  z-index: 10;
+  transform: translate(-50%, 0);
+}
+.visual .popup .btn_paging span.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  opacity: 1;
+  background-color: #FFF;
+}
+.visual .popup .btn_paging span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #D64920;
+}
+.visual .popup .btn_stop {
+  width: 14px;
+  height: 14px;
+  margin-left: 10px;
+  margin-top: 3px;
+  background-image: url(../images/main/pop_stop.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  font-size: 0;
+  line-height: 0;
+}
+.visual .popup .btn_stop.play {
+  background-image: url(../images/main/pop_play.svg);
+}
+@media screen and (max-width:640px){
+  .visual {
+    margin: 0 5.5%;
+  }
+  .visual .popup .btn_stop {
+    margin-top: 1px;
+  }
+  .visual .popup .ctrl_wrap {
+    bottom: 15px;
+  }
+}
+
+.pension { 
+  margin: 5% 3% 0 3%;
+}
+.pension h2 {
+  color: #1D1D1D;
+  font-size: 5vw;
+  font-weight: 700;
+  margin-bottom: 2%;
+}
+.pension h3 { 
+  color: #1D1D1D;
+  font-size: 1.5vw;
+  font-weight: 700;
+  margin-top: 1%;
+}
+.pension .p_group1 {
+  position: relative;
+  display: flex;
+  width: 100%;
+  border-top: 1px solid #1D1D1D;
+}
+.pension .p_group1_first {
+  padding: 5% 5% 10% 0;
+  width: 61.45%;
+}
+.pension .p_group1_first a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pension .p_group1_last {
+  padding: 5% 0 10% 5%;
+  width:  38.55%;
+}
+.pension .p_group1_last::after {
+  content: '';
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: 61.45%;
+  top: 0;
+  background: #1D1D1D;
+}
+.pension .p_group1_last a img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+.pension .p_group2 {
+  position: relative;
+  display: flex;
+  border-top: 1px solid #1D1D1D;
+}
+.pension .p_group2_first {
+  padding: 10% 5% 10% 12%;
+  width: 61.45%;
+}
+.pension .p_group2_first a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pension .p_group2_last::after {
+  content: '';
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: 61.45%;
+  top: 0;
+  background: #1D1D1D;
+}
+.pension .p_group3 {
+  position: relative;
+  display: flex;
+  width: 100%;
+  border-top: 1px solid #1D1D1D;
+  border-bottom: 1px solid #1D1D1D;
+  align-items: flex-end;
+}
+.pension .p_group3_first {
+  width: 32.3%;
+}
+.pension .p_group3_first .more {
+  display: block;
+  position: relative;
+  padding: 8% 0 8% 2%;
+  border-top: 1px solid #1D1D1D;
+}
+.pension .p_group3_first .more::before {
+  content: '';
+  width: 32.3%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.pension .p_group3_first .more span {
+  font-size: 2vw;
+  font-weight: 400;
+}
+.pension .p_group3_first .more i {
+  font-size: 4vw;
+  font-weight: 400;
+  position: absolute;
+  top: 25%;
+  right: 10%;
+}
+.pension .p_group3_first .more::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 32.3%;
+  background: #1D1D1D;
+}
+.pension .p_group3_last {
+  padding: 5% 0 10% 5%;
+  width: 67.7%;
+}
+.pension .p_group3_last::after {
+  content: '';
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: 32.3%;
+  top: 0;
+  background: #1D1D1D;
+}
+.pension .p_group3_last a img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
