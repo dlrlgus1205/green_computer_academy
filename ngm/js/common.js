@@ -41,8 +41,13 @@ $(window).on('load', function () {
       $('.header').removeClass('menu_mobile');
   });
   
-  $('footer .flogo button').on('click', function(){
+  $('footer .flogo button.open').on('click', function(){
       $('footer .flogo').toggleClass('f_open')
+      $('.footer .finfo').slideDown()
   })
+  $('footer .flogo button.close').on('click', function(){
+    $('footer .flogo').toggleClass('f_open')
+    $('.footer .finfo').slideUp()
+})
 
 });

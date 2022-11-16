@@ -250,6 +250,12 @@ html, body {
     .header.menu_mobile .gnb .gnb_close {
         display: block;
     }
+    .header.fixed {
+        min-width: 320px;
+    }
+    .header.fixed .gnb .gnb_open i {
+        color: #1D1D1D;
+    }
 }
 @media screen and (max-width:640px){
     .header {
@@ -286,12 +292,12 @@ html, body {
 
 .footer {
     width: 100%;
-    margin: 0 3%;
+    margin: 0 3% 10% 3%;
     border-top: 1px solid #1D1D1D;
     text-align: left;
 }
 .footer .flogo button {
-    margin: 3% 0;
+    margin: 3% 0 1% 0;
 }
 .footer .flogo button span {
     float: left;
@@ -309,21 +315,19 @@ html, body {
     margin: 5px 0 0 0;
     font-size: 30px;
 }
+
 .footer .flogo button.close {
     display: none;
 }
 .footer .flogo.f_open button.close {
     display: block;
 }
-footer .flogo.f_open button.open {
+.footer .flogo.f_open button.open {
+    display: none;
+}
+.footer .finfo {
     display: none;
 }
 .footer .finfo span {
     padding-right: 2%;
-}
-.footer .finfo .inner1 {
-    display: block;
-}
-.footer .finfo .inner2 {
-    display: block;
 }
